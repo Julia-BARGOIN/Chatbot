@@ -1,0 +1,256 @@
+@charset "utf-8"; 
+
+/* Reset */
+@import "reset-css";
+
+/* Components */
+ /*V1*/
+body {
+  background: black;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+.user {
+  background: beige;
+  grid-column: 1 / 2;
+  grid-row: 1;
+  text-align: center;
+  float: right;
+}
+.photo {
+  width: 30%;
+  border-radius: 50%;
+}
+.user-name{
+  position: relative;
+}
+.name{
+  font-size: : 16%;
+} 
+.list {
+  background: #AEAEAE;
+  grid-column: 1;
+  grid-row: 2 / 5;
+  padding-right: 3%;
+  padding-left: 3%;
+  min-width: 200px;
+  max-width: 200px;
+}
+.photo-list{
+  border-radius: 50%;
+  width: 30%;
+  vertical-align: middle;
+}
+.list-profil{
+  padding-top: 4%;
+}
+.counter-list{
+  padding: 0 8px;
+  text-align: center;
+  color: #000000;
+  background: #00FFEB;
+  border-radius: 10px;
+}
+.scroller-list {
+  width: 94%;
+  height: auto;
+  overflow-y: scroll;
+}
+.chatbox { 
+  background: #9FD2FA;
+  grid-column: 2 / 4;
+  grid-row: 1 / 4;
+}
+.msg-send{
+  margin-top: 2vh;
+  margin-right: 2vh; 
+  margin-left: 2vh;
+  background: #DCFEFC;
+  padding: 1vh 2vh;
+  border-radius: 10px;
+}
+.msg-photo img{
+  border-radius: 50%;
+  width: 30%;
+}
+.msg-name{
+  vertical-align: middle;
+  padding: 10px;
+}
+.msg-status{
+  float: left;
+  display: flex;
+}
+
+.counter-send{
+  float: left;
+  padding: 10px;
+}
+.msg-received{
+  margin-top: 2%;
+  margin-right: 2%; 
+  margin-left: 2%;
+  margin-bottom: 2%;
+  background: #62DBD4;
+  padding: 2% 1%;
+  border-radius: 10px;
+  text-align: right;
+}
+.scroller {
+  height: 85vh;
+  overflow-y: scroll;
+}
+.input{
+  background: #91CCDF;
+  grid-row: 5 / 4;
+  grid-column: 2 / 4;
+  border-top: 1px solid #ddd;
+  padding: 10px;
+}
+.send{
+  background-color: pink;
+}
+
+
+
+
+
+
+
+/*.contact{
+  width: 20%;
+  height: 30%;
+  float: left;
+}
+.contact-profil{
+  background: #9FD2FA;
+  padding: 1vh 1vh 1vh 1vh;
+  display: flex;
+  justify-content: right; 
+  align-items: center;
+}
+.contact-profil-avatar img{
+  width: 90px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+.contact-profil-name span{
+  margin-top: 25px;
+  font-size: 3.3vh;
+  padding: 0vh 0vh 0vh 2vh;
+}
+
+.contact-list{
+  display: flex; 
+  align-items: center;
+}
+.contact-list ul li{
+  list-style-type: none;
+  height: 10vh;
+}
+.contact-list-items-avatar, .contact-list-items-name, .contact-list-items-counter {
+  float: left;
+}
+.contact-list{
+  background: #96E6EB;
+}
+.contact-list-items-avatar img{
+  width: 50px;
+  border-radius: 50vh;
+}
+.contact-list-items-name span, .contact-list-items-counter span{
+  margin-top: 25px;
+  font-size: 20px;
+  padding: 0px 0px 0px 10px;
+}
+
+.message{
+  background: #00B7C3;
+  padding: 1vh 0vh 0ch 1vh;  
+}
+.scroller {
+  width: 79.3%;
+  height: 50%;
+  overflow-y: scroll;
+}
+
+.message-receiveds{
+  background: #BBE3E6;
+  width: 50%;
+  border-radius: 20px 20px 0px 20px;
+}
+.message-receiveds-status{
+  display: flex;
+  align-items: center;
+}
+.message-receiveds-name, .message-receiveds-avatar, .message-receiveds-date{
+  font-size: 20px;
+}
+.message-receiveds-avatar{
+  padding: 10px 0px 0px 10px;
+  width: 20%;
+}
+.message-receiveds-avatar img{
+  width: 55px;
+  border-radius: 50px;
+}
+.message-receiveds-name{
+  width: 60%;
+}
+.message-receiveds-date{
+  width: 10%;
+}
+.message-receiveds-text{
+  padding: 0vh 0vh 1vh 1vh;
+}
+.message-receiveds-text span{
+  font-size: 30px;
+}
+
+.message-sending{
+  background: #43DACE;
+  width: 50%;
+  border-radius: 20px 20px 20px 0px;
+}
+.message-sending-status{
+  display: flex;
+  align-items: center;
+}
+.message-sending-name, .message-sending-avatar, .message-sending-date{
+  font-size: 20px;
+}
+.message-sending-avatar{
+  padding: 10px 0px 0px 10px;
+  width: 20%;
+}
+.message-sending-avatar img{
+  width: 55px;
+  border-radius: 50px;
+}
+.message-sending-name{
+  width: 60%;
+}
+.message-sending-date{
+  width: 10%;
+}
+.message-sending-text{
+  padding: 0vh 0vh 1vh 1vh;
+}
+.message-sending-text span{
+  font-size: 30px;
+}
+
+.sending{
+  background: #1D7B82;
+  width: auto;
+}
+.sending-text{
+  height: 3vh;
+}
+.sending-button{
+  background: pink;
+}*/
